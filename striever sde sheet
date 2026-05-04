@@ -127,16 +127,67 @@ public class methods{
         obj.greet();
         }
    }
+//Parameterised Function:
+class welcome{
+     void greet(String name);
+     {
+     System.out.println("welcome "+ name +"" + age);
+     }
 
+public class methods{
+   public static void main(String [] args){
+        System.out.println("Hi");
+        welcome obj = new welcome();
+        obj.greet(Rahul,34);
+        }
+   }
+//Return:
+class welcome{
+     void greet(String name);
+     {
+     System.out.println("welcome "+ name +"" + age);
+     }
+public int add(int a,int b){
+    return a+b;
+}
+}
+public class methods{
+   public static void main(String [] args){
+         System.out.println("Hi");
+         welcome obj = new welcome();
+         int ob = obj.add(5,3);
+         System.out.println(ob);
+        }
+   }
+//if we create a same function to create another function we don't have to create a object
+class welcome{
+     void greet(String name);
+     {
+     System.out.println("welcome "+ name +"" + age);
+     }
+public int add(int a,int b){
+    greet("rahul",31);///
+    return a+b;
+}
+}
+public class methods{
+   public static void main(String [] args){
+         System.out.println("Hi");
+         welcome obj = new welcome();
+         int ob = obj.add(5,3);
+         System.out.println(ob);
+        }
+   }
+//STATIC----- if one is static another is non static then we cannot call the.so we have to create a obj.then we only we can call then...if both are static then it is well and good we can call them
+public class newDemo{
+    public void displayFunction(){
+        System.out.println("display");
+}
 
-
-
-
-
-
-
-
-
+public static void main(String args[]){
+         new methods().displayFunction();//created obj because we call non static methods with static method
+}
+}
 
 
 
