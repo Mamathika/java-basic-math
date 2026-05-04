@@ -1,0 +1,149 @@
+1.If ElseIf
+Given marks of a student, print on the screen:
+Grade A if marks >= 90
+Grade B if marks >= 70               
+Grade C if marks >= 50
+Grade D if marks >= 35
+Fail, otherwise.
+Example 1
+Input: marks = 14
+Output: Fail
+Explanation: marks are less than 35.
+  class Solution {
+    public void studentGrade(int marks) {
+        if(marks>=90)
+        System.out.println("Grade A");
+        else if(marks>=70)
+        System.out.println("Grade B");
+        else if(marks>=50)
+        System.out.println("Grade C");
+        else if(marks>=35)
+        System.out.println("Grade D");
+        else
+        System.out.println("Fail");
+
+    }
+}
+2.Switch Case
+Given the integer day denoting the day number, print on the screen which day of the week it is. Week starts from Monday and for values greater than 7 or less than 1, print Invalid.
+Example 1
+Input: day = 3
+Output: Wednesday
+Example 2
+Input: day = 8
+Output: Invalid
+class Solution {
+    public void whichWeekDay(int day) {
+    switch(day){
+        case 1:
+        System.out.println("Monday");
+        break;
+        case 2:
+        System.out.println("Tuesday");
+        break;
+        case 3:
+        System.out.println("Wednesday");
+        break;
+        case 4:
+        System.out.println("Thursday");
+        break;
+        case 5:
+        System.out.println("Friday");
+        break;
+        case 6:
+        System.out.println("Saturday");
+        break;
+        case 7:
+        System.out.println("Sunday");
+        break;
+        case 8:
+        System.out.println("Invalid");
+        default:
+    }
+    }
+}
+3.For Loop
+Given two integers low and high, return the sum of all integers from low to high inclusive.
+Example 1
+Input: low = 1, high = 5
+Output: 15
+Explanation: 1 + 2 + 3 + 4 + 5 = 15
+class Solution {
+    public int forLoop(int low, int high)
+     {
+        int sum=0;
+        for(int i=low;i<=high;i++){
+           sum+=i;
+        }
+        return sum;
+    }
+}
+4.While Loop
+Given a digit d (0 to 9), find the sum of the first 50 positive integers (integers > 0) that end with digit d.
+A number ends with digit d if its last digit is d.
+Example 1
+Input: d = 1
+Output: 12300
+Explanation:
+The first 50 positive integers ending with 1 are: 1, 11, 21, 31, ..., 491
+Their sum is 12300.
+class whiles{
+    public int whileloop(int d){
+        int sum=0;
+        int num=d;
+        int count=0;
+        while(count<50){
+            sum+=num;
+            num+=10;
+            count++;
+        }
+        return sum;
+    }
+        public static void main(String args[]){
+        whiles obj=new whiles();
+        System.out.println(obj.whileloop(1));
+        }
+}
+OPTIMAL SOL:
+class Whiles {
+    public int whileloop(int d) {
+        int first = d;
+        int last = d + 49 * 10;  //a+(n-1)*d    /a=d,n=50,d=10
+        int n = 50;
+        return (n * (first + last)) / 2; //formula
+    }
+}
+6.METHODS(FUNCTIONS)
+class welcome{
+     void greet();
+     {
+     System.out.println("welcome");
+     }
+
+public class methods{
+   public static void main(String [] args){
+        System.out.println("Hi");
+        welcome obj = new welcome();
+        obj.greet();
+        }
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
